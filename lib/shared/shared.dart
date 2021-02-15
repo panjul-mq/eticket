@@ -1,3 +1,1 @@
-
-
-part 'share_value.dart';
+part 'shared_value.dart';
