@@ -5,25 +5,22 @@ class User extends Equatable {
   final String email;
   final String name;
   final String profilePicture;
-  final String phoneNumber;
+  final String numberPhone;
 
   User(this.id, this.email,
-  {this.name,
-  this.profilePicture,
-  this.phoneNumber,
-});
-
+      {this.name,
+      this.profilePicture,
+      this.numberPhone});
+  
   @override
-  String toString() {
-    return '[$id] - $name, $email';
+  String toString(){
+    return "[$id] - $name, $email";
   }
 
-  @override
   List<Object> get props => [
-    id,
-    email,
-    name,
-    profilePicture,
-    phoneNumber,
+        id,
+        email,
+        name,
+        numberPhone
   ];
 }

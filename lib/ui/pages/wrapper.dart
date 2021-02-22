@@ -1,12 +1,13 @@
-part of 'pages.dart';
+part of'pages.dart';
 
 class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FirebaseUser firebaseUser = Provider.of<FirebaseUser>(context);
-    if (firebaseUser == null) {
+    
+    if(firebaseUser == null){
       return SignInPage();
-    } else {
+    }else {
       return MainPage();
     }
   }

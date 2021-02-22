@@ -1,4 +1,4 @@
-part of 'pages.dart';
+part of'pages.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -8,18 +8,15 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return StreamProvider.value(
-      value: AuthServices.userStream,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        initialRoute: '/',
-        routes: {
-          '/signIn' : (context)=>SignInPage(),
-          '/signUp' : (context)=>SignUpPage(),
-          '/forgot' : (context)=>ForgotPassPage(),
-          '/email' : (context)=>EmailPage(),
-        },
-        home: Wrapper(),
+    return Scaffold(
+      appBar: AppBar(title: Text("Main Page"),),
+      body: Center(
+        child: RaisedButton(
+          child: Text("Sign out"),
+          onPressed: (){
+            AuthServices.signOut();
+          }
+        ),
       ),
     );
   }

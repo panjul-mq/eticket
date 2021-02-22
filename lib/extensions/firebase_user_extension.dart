@@ -1,13 +1,13 @@
 part of 'extensions.dart';
 
-extension FirebaseUserExtension on FirebaseUser{
+extension FirebaseUserExtension on FirebaseUser {
   User convertToUser({
     String name = "No Name",
-    String phoneNumber = "0",
-  }) => User(this.uid, this.email,
+    String numberPhone = "0",
+  }) => User(this.uid,this.email,
     name: name,
-    phoneNumber: phoneNumber,
+    numberPhone: numberPhone
   );
-  Future<User> fromFirestore() async => await UserServices.getUser(this.uid);
-  
+
+  Future<User> fromFireStore() async => await UserServices.getUser(this.uid);
 }
