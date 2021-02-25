@@ -20,3 +20,4 @@ part 'intro.dart';
 part 'older.dart';
 part 'home.dart';
 part 'detail.dart';
+part 'cart.dart';

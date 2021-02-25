@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       value: AuthServices.userStream,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: DetailPage(),
+        home: Cart(),
         //routes: {
         //  '/signin':(context)=>Login(),
         //  '/signup':(context)=>SignUpPage(),
